@@ -30,6 +30,7 @@ def ejercicio(string01, string02, items, color)
     file.puts '</ol>'
   end
   file.close
+  return nil
 end
 
 # cadenas('hola hola', 'hola hola hola')
