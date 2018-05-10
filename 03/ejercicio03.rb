@@ -9,4 +9,15 @@ def cuenta_palabras(filename)
   file.close
 end
 
+def cuenta_palabras_cadena(filename, texto)
+  file = File.open(filename, 'r')
+  busqueda = file.read
+  conteo = busqueda.scan(texto)
+  # conteo = texto.split(' ').map(&:chomp)
+  # puts "Total de palabras en el archivo: #{conteo.count}"
+  puts "Total de <b>#{texto}</b> en el archivo: #{conteo.count}"
+  file.close
+end
+
 cuenta_palabras('peliculas.txt')
+cuenta_palabras_cadena('peliculas.txt', 'La')
